@@ -1,0 +1,80 @@
+<html>
+   
+   <head>
+      <title>Form Validation</title>
+      
+      <script type="text/javascript">
+        function validate()
+      {
+  	name=document.myForm.Name.value;
+	email=document.myForm.EMail.value;
+	zip=document.myForm.Zip.value;
+	country=document.myForm.Country.value;
+	alert(country);
+	if (name.length==0)
+	{
+		alert("Name cannot be empty");
+		return false;
+	}
+	if (email.length==0)
+	{
+		alert("Email cannot be empty");
+		return false;
+	}
+	if (zip.length==0)
+	{
+		alert("Zip cannot be empty");
+		return false;
+	}
+	if (country.length==0)
+	{
+		alert("Zip cannot be empty");
+		return false;
+	}
+	return true;
+      }
+      </script>
+      
+   </head>
+   
+   <body>
+      <form action="reg1.html" name="myForm" onsubmit="return(validate());">
+         <table cellspacing="2" cellpadding="2" border="1">
+            
+            <tr>
+               <td align="right">Name</td>
+               <td><input type="text" name="Name" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">EMail</td>
+               <td><input type="text" name="EMail" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">Zip Code</td>
+               <td><input type="text" name="Zip" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">Country</td>
+               <td>
+                  <select name="Country">
+                     <option value="-1" selected>[choose yours]</option>
+                     <option value="1">USA</option>
+                     <option value="2">UK</option>
+                     <option value="3">INDIA</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align="right"></td>
+               <td><input type="submit" value="Submit" /></td>
+            </tr>
+            
+         </table>
+      </form>
+      
+   </body>
+</html>

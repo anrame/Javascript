@@ -1,0 +1,38 @@
+<html>
+<head>
+<script>
+function calculate(op)
+{
+x=Number(document.MyForm.t1.value);
+y=Number(document.MyForm.t2.value);
+switch(op)
+{
+case 1:
+	z=x+y;
+	break;
+case 2:
+	z=x-y;
+	break;
+case 3:
+	z=x*y;
+	break;
+case 4:
+	z=x/y;
+	break;
+}
+document.MyForm.result.value=z;
+}
+</script>
+</head>
+<body>
+<form name="MyForm" action="sample.html" method="get" >
+Number1<input type="text" name="t1"><br>
+Number2<input type="text" name="t2"><br>
+Result<input type="text" name="result"><br>
+<input type="button" value="+" onclick="calculate(1)">
+<input type="button" value="-" onclick="calculate(2)">
+<input type="button" value="*" onclick="calculate(3)">
+<input type="button" value="/" onclick="calculate(4)">
+</form>
+</body>
+</html>

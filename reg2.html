@@ -1,0 +1,25 @@
+<html>
+<body>
+<script language="javascript">
+
+function onlyCharacters(e){
+window.status="Hello";
+	var keynum
+	var keychar
+	var charcheck
+	
+		keynum = e.keyCode
+	
+	keychar = String.fromCharCode(keynum)
+//alert(keychar+":::"+keynum);
+	charcheck = /[^A-z]/
+alert(charcheck.test(keychar));
+	return charcheck.test(keychar);
+}
+</script>
+
+<form>
+<input type="text" onkeypress="return onlyCharacters(event)" />
+</form>
+</body>
+</html>

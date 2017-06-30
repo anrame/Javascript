@@ -1,0 +1,28 @@
+<html>
+<body>
+<script language="javascript">
+function onlyNumbers(e){
+	
+	keynum = e.keyCode
+	alert(keynum);
+	keychar = String.fromCharCode(keynum)
+alert(keychar);
+	
+/*
+	The fromCharCode() method converts Unicode values into characters
+	var n = String.fromCharCode(65); 
+	returns A
+	*/
+
+	numcheck = /\D/
+	x=numcheck.test(keychar)
+alert(x);
+return x;
+}
+</script>
+
+<form>
+<input type="text" onkeypress="return onlyNumbers(event)" />
+</form>
+</body>
+</html> 

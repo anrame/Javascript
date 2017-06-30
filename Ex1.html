@@ -1,0 +1,30 @@
+<html>
+<head>
+<script language="javascript">
+function details(x)
+{
+document.write(x+" is of type "+typeof(x)+"<br>");
+x=56
+document.write(x+" is of type "+typeof(x)+"<br>");
+x="Hello";
+document.write(x+" is of type "+typeof(x)+"<br>");
+x=8.9
+document.write(x+" is of type "+typeof(x)+"<br>");
+x=false
+document.write(x+" is of type "+typeof(x)+"<br>");
+x=new Date();
+document.write(x+" is of type "+typeof(x)+"<br>");
+var y
+document.write(y+" is of type "+typeof(y)+"<br>");
+}
+
+</script>
+</head>
+<body>
+<script>
+x=prompt("Enter x");
+y=prompt("Enter y");
+details(x);
+</script>
+</body>
+</html>
